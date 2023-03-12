@@ -1,5 +1,5 @@
 #include "Game.h"
-#include "ResourceHolder.h"
+
 #include <iostream>
 
 Game::Game()
@@ -8,9 +8,7 @@ Game::Game()
     mWindow.setFramerateLimit(60);
     mPlayer.setPosition(100.f, 100.f);
     playerSpeed = 100.f;
-    ResorceHolder textures;
-    textures.loadingFromFiles(Textures::ID::Airplane, "../SFML_Avion/Eagle.png");
-
+    textures.load(Textures::ID::Airplane, "../SFML_Avion/Eagle.png");
     mPlayer.setTexture(textures.get(Textures::ID::Airplane));
 }
 

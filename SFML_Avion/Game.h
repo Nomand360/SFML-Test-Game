@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 #include <SFML/Graphics.hpp>
-
+#include "ResourceHolder.h"
 
 class Game
 {
@@ -14,6 +14,8 @@ private:
     bool mIsMovingRight{false};
     bool mIsMovingLeft{false};
     float playerSpeed{0};
+
+    ResorceHolder<sf::Texture, Textures::ID> textures;
 
 public:
     Game();
