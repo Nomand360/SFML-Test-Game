@@ -8,7 +8,7 @@ Game::Game()
     mWindow.setFramerateLimit(60);
     mPlayer.setPosition(100.f, 100.f);
     playerSpeed = 100.f;
-    textures.load(Textures::ID::Airplane, "../SFML_Avion/Eagle.png");
+    textures.load(Textures::ID::Airplane, "res/Eagle.png");
     mPlayer.setTexture(textures.get(Textures::ID::Airplane));
 }
 
