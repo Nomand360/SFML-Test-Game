@@ -9,7 +9,9 @@ Game::Game()
     mPlayer.setPosition(100.f, 100.f);
     playerSpeed = 100.f;
     textures.load(Textures::ID::Airplane, "res/Eagle.png");
+    textures.load(Textures::ID::Landscape, "res/Desert.png");
     mPlayer.setTexture(textures.get(Textures::ID::Airplane));
+    landscape.setTexture(textures.get(Textures::ID::Landscape));
 }
 
 void Game::run()
@@ -85,6 +87,7 @@ void Game::update(sf::Time deltaTime)
 void Game::render()
 {
     mWindow.clear();
-    mWindow.draw(this->mPlayer);
+    mWindow.draw(landscape);
+    mWindow.draw(mPlayer);
     mWindow.display();
 }
